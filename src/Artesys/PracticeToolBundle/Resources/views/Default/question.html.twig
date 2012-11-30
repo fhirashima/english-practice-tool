@@ -2,7 +2,11 @@
 {% extends '::base.html.twig'  %}
 
 {% block body %}
-    <form action="{{ path('select') }}" method="post" {{ form_enctype(form) }} novalidate >
+
+    {{ question.translation }}
+
+
+    <form action="{{ path('answer') }}" method="post" {{ form_enctype(form) }} novalidate >
         {{ form_widget(form) }}
         <input type="submit" value="Save Post" />
     </form>
